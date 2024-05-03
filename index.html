@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="captch.css">
+<link rel="stylesheet" href= "https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+integrity=
+"sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<script src="captch.js"></script>
+</head>
+<body onload="generate()" onload="doShowAll()">
+<h2>Shopping Cart Webpage</h2>
+<p>Insert items and quantity for your shopping cart. </p>
+<form name=ShoppingList>
+<div id="main">
+<table>
+<tr>
+<td><b>Item:</b><input type=text name=name></td>
+<td><b>Quantity:</b><input type=text name=data></td>
+</tr>
+<tr>
+<td>
+<input type=button value="Save"	onclick="SaveItem()">
+<input type=button value="Update" onclick="ModifyItem()">
+<input type=button value="Delete" onclick="RemoveItem()">
+</td>
+</tr>
+</table>
+</div>
+<div id="items_table">
+<h3>Shopping List</h3>
+<table id=list></table>
+<p>
+<label><input type=button value="Clear" onclick="ClearAll()">
+<i>* Delete all items</i></label>
+</p>
+</div>
+</form>
+<div id="user-input" class="inline">
+<input type="text" id="submit" placeholder="Enter Captcha" />
+</div>
+ 
+<div class="inline" onclick="generate()">
+<i class="fas fa-sync"></i>
+</div>
+<div id="image" class="inline" selectable="False">
+</div>
+<input type="submit" id="btn" onclick="printmsg()" />
+<p id="key"></p>
+</div>
+</body> </html>
